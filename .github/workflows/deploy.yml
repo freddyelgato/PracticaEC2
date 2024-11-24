@@ -29,6 +29,7 @@ jobs:
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
           pm2 delete appEC2 || echo "No existing process found"
+          ls
           cd ProyectoEC2 
           git pull origin main
           npm install
